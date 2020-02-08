@@ -1,0 +1,2 @@
+- Wenn man z.B. gerade Level 5 wird und Stealth bekommt, aktualisiert sich die Stance Bar nicht
+- Optischer Bug bei Nutzung von ExtraQuestButton
