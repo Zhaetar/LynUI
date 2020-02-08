@@ -78,11 +78,11 @@ local layout    = {
 	local name, _, icon, count, dtype, _, expiration = UnitAura(unit, index, filter)
 	if  name then
 		self:SetNormalTexture(icon)
-		self.Count:SetText(count > 1 and count or '')
-		self.expiration = expiration - GetTime()
-			if filter == 'HARMFUL' then
-				 FormatDebuffs(self, name, dtype)
-			end
+		self.Count:SetText((count and count > 1) or '')
+		-- self.expiration = expiration - GetTime()
+		-- 	if filter == 'HARMFUL' then
+		-- 		 FormatDebuffs(self, name, dtype)
+		-- 	end
 	end
  end
 

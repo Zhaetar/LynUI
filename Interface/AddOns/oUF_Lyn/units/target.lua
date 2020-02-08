@@ -8,7 +8,7 @@ local CreateLayout = function(self, unit)
 	self:SetScript('OnLeave', UnitFrame_OnLeave)
 	self:RegisterForClicks('AnyUp')
 
-	self:SetWidth(342)
+	self:SetWidth(300)
 	self:SetHeight(40)
 	self:SetPoint('BOTTOM', UIParent, 187, 125)
 

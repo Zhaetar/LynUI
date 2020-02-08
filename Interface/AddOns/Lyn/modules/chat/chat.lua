@@ -185,26 +185,6 @@ local function StyleChat(self)
 	-- implement tab modification
 	SkinTab(self)
 
-	-- hide scroll up
-	local buttonUp = _G[self..'ButtonFrameUpButton']
-	buttonUp:SetAlpha(0)
-	buttonUp:EnableMouse(false)
-
-	-- hide scroll down
-	local buttonDown = _G[self..'ButtonFrameDownButton']
-	buttonDown:SetAlpha(0)
-	buttonDown:EnableMouse(false)
-
-	-- hide scroll bottom
-	-- and reposition ready if it's reshown
-	local buttonBottom = _G[self..'ButtonFrameBottomButton']
-	buttonBottom:Hide()
-	buttonBottom:ClearAllPoints()
-	buttonBottom:SetPoint('RIGHT', chat, 'BOTTOMLEFT', -10, 12)
-	buttonBottom:HookScript('OnClick', function(self)
-		self:Hide()
-	end)
-
 	-- hide the weird extra background for now non-existent buttons
 	for _, texture in pairs({
 		'ButtonFrameBackground',
@@ -271,12 +251,12 @@ end
 -- HAX
 -- fix buggy bottoms with a more vigorous hook
 -- otherwise cinematics/world map make the scroll2bottom button visible again.
-hooksecurefunc('ChatFrame_OnUpdate', function(self)
-	local buttonBottom = _G[self:GetName()..'ButtonFrameBottomButton']
-	if self:AtBottom() and buttonBottom:IsShown() then
-		buttonBottom:Hide()
-	end
-end)
+-- hooksecurefunc('ChatFrame_OnUpdate', function(self)
+-- 	local buttonBottom = _G[self:GetName()..'ButtonFrameBottomButton']
+-- 	if self:AtBottom() and buttonBottom:IsShown() then
+-- 		buttonBottom:Hide()
+-- 	end
+-- end)
 
 
 -- IMPLEMENT

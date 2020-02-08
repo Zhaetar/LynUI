@@ -11,17 +11,17 @@ local BarPositions = {
 }
 
 local SetPagingPosition = function()
-	for _, v in pairs({
-		MainMenuBarPageNumber,
-		ActionBarUpButton,
-		ActionBarDownButton
-	}) do
-		v:ClearAllPoints()
-	end
-	ActionBarUpButton:SetPoint('TOPRIGHT', _G['LynBar1'], 'TOPLEFT', -5, 9)
-	ActionBarDownButton:SetPoint('TOP', ActionBarUpButton, 'BOTTOM', 0, 16)
-	MainMenuBarPageNumber:SetPoint('TOPRIGHT', ActionBarUpButton, 'BOTTOMLEFT', 0, 16)
-	MainMenuBarPageNumber:SetFont([[Fonts\ARIALN.ttf]], 14, 'OUTLINE')
+	-- for _, v in pairs({
+	-- 	MainMenuBarPageNumber,
+	-- 	ActionBarUpButton,
+	-- 	ActionBarDownButton
+	-- }) do
+	-- 	v:ClearAllPoints()
+	-- end
+	-- ActionBarUpButton:SetPoint('TOPRIGHT', _G['LynBar1'], 'TOPLEFT', -5, 9)
+	-- ActionBarDownButton:SetPoint('TOP', ActionBarUpButton, 'BOTTOM', 0, 16)
+	-- MainMenuBarPageNumber:SetPoint('TOPRIGHT', ActionBarUpButton, 'BOTTOMLEFT', 0, 16)
+	-- MainMenuBarPageNumber:SetFont([[Fonts\ARIALN.ttf]], 14, 'OUTLINE')
 end
 
 local SetPositions = function()
@@ -130,7 +130,7 @@ local AddGrid = function()
 	g:UnregisterEvent'PLAYER_REGEN_ENABLED'
 	for i, button in next, list do
 		button:SetAttribute('showgrid', var)
-		ActionButton_ShowGrid(button)
+		-- ActionButton_ShowGrid(button)
 	end
 end
 

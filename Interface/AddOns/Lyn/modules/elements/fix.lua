@@ -13,37 +13,6 @@ WorldMapScrollFrame_ResetZoom = function()
 	end
 end
 
-if WorldMapFrame.UIElementsFrame.BountyBoard.GetDisplayLocation == WorldMapBountyBoardMixin.GetDisplayLocation then
-	WorldMapFrame.UIElementsFrame.BountyBoard.GetDisplayLocation = function(frame)
-		if InCombatLockdown() then
-			return
-		end
-
-		return WorldMapBountyBoardMixin.GetDisplayLocation(frame)
-	end
-end
-
-if WorldMapFrame.UIElementsFrame.ActionButton.GetDisplayLocation == WorldMapActionButtonMixin.GetDisplayLocation then
-	WorldMapFrame.UIElementsFrame.ActionButton.GetDisplayLocation = function(frame, useAlternateLocation)
-		if InCombatLockdown() then
-			return
-		end
-
-		return WorldMapActionButtonMixin.GetDisplayLocation(frame, useAlternateLocation)
-	end
-end
-
-if WorldMapFrame.UIElementsFrame.ActionButton.Refresh == WorldMapActionButtonMixin.Refresh then
-	WorldMapFrame.UIElementsFrame.ActionButton.Refresh = function(frame)
-		if InCombatLockdown() then
-			return
-		end
-
-		WorldMapActionButtonMixin.Refresh(frame)
-	end
-end
-
-
 -- http://www.wowinterface.com/forums/showpost.php?p=320422&postcount=8
 --[[
 local function FixFontShadow(obj)

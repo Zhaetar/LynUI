@@ -7,10 +7,10 @@ local LookingForGroup 	= "LookingForGroup"
 
 local ChatMove = function()
 	ChatFrame1:SetUserPlaced(true)
-	ChatFrame1:SetWidth(400)
+	ChatFrame1:SetWidth(300)
 	ChatFrame1:SetHeight(250)
 	ChatFrame1:ClearAllPoints()
-	ChatFrame1:SetPoint('BOTTOMLEFT', UIParent, 'BOTTOMLEFT', 50, 95)
+	ChatFrame1:SetPoint('BOTTOMLEFT', UIParent, 'BOTTOMLEFT', 50, 195)
 
 	FCF_SetWindowAlpha(ChatFrame1, 0, true)
 	FCF_SetWindowAlpha(ChatFrame2, 0, true)
